@@ -26,6 +26,7 @@ async function submitPost() {
     }
 }
 
+<<<<<<< Updated upstream
 window.onload = () => {
     try {
         const response = await fetch("/api/posts"):
@@ -36,3 +37,15 @@ window.onload = () => {
     }
     renderPost(hardcodedPost);
 };
+=======
+window.onload = async () => {
+    try {
+   const response = await fetch("/api/posts");
+   const posts = await response.json();
+   posts.forEach((post) => renderPost(post));
+}  catch(error) {
+        console.error("Error fetching posts:", error);
+    }
+    };
+    renderPost(hardcodedPost);
+>>>>>>> Stashed changes
